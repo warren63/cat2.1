@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<head>
+<style> 
+input{
+  width: 30%;
+  padding: 10px;
+  margin: 8px;
+  box-sizing: border-box;
+  display: inline-block;
+}
+</style>
+<title>Techovid</title>
+</head>
+<body>
+<center><h1><B>Techovid Registration</B></h1></center><hr>
+<form name="reg" onsubmit="return validate()">
+<label>Name</label>
+<input type="text" name="fname" placeholder="NAME" pattern="[A-Za-z]{3,}" required><br>
+<label>Age</label>
+<input type="number" name="age" placeholder="AGE" required><br>
+<label>Phone No.</label>
+<input type="text" name="phno" placeholder="PHONE NO." pattern="[0-9]{10}" required><br>
+<label>Email Id</label>
+<input type="email" name="mail" placeholder="username@collegename.in" required><br>
+<label>State</label>
+<input type="text" name="state" placeholder="STATE" required><br>
+<label>Address</label>
+<input type="text" id="add" placeholder="ADDRESS" required><br>
+<label>College/University</label>
+<input type="text" name="coll" placeholder="COLLEGE" required><br>
+<label>Branch</label>
+<input type="text" name="branch" placeholder="BRANCH" required><br>
+<label>UserName</label>
+<input type="text" name="uname" placeholder="USERNAME" required><br>
+<label>Password</label>
+<input type="password" name="pass" placeholder="PASSWORD" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase, one symbol and at least 8 characters" required><br>
+<input type="submit" value="SUBMIT"> 
+</form>
+<script>
+function validate()
+{
+var a = document.forms["reg"]["fname"].value;
+var b = document.forms["reg"]["age"].value;
+var c = document.forms["reg"]["phno"].value;
+var d = document.forms["reg"]["mail"].value;
+var e = document.forms["reg"]["state"].value;
+var f = document.forms["reg"]["add"].value;
+var g = document.forms["reg"]["coll"].value;
+var h = document.forms["reg"]["branch"].value;
+var i = document.forms["reg"]["uname"].value;
+var j = document.forms["reg"]["pass"].value;
+  if (a == " ") 
+  {
+    alert("Name must be filled out");
+    return false;
+  }
+else if (b == " ") 
+  {
+    alert("Age must be filled out");
+    return false;
+  }
+else if (c == " ") 
+  {
+    alert("Phone no must be filled out");
+    return false;
+  }
+else if (d == " ") 
+  {
+    alert("Email must be filled out");
+    return false;
+  }
+else if (e == " ") 
+  {
+    alert("State must be filled out");
+    return false;
+  }
+else if (f == " ") 
+  {
+    alert("Address must be filled out");
+    return false;
+  }
+else if (g == " ") 
+  {
+    alert("College must be filled out");
+    return false;
+  }
+else if (h == " ") 
+  {
+    alert("Branch must be filled out");
+    return false;
+  }
+else if (i == " ") 
+  {
+    alert("Username must be filled out");
+    return false;
+  }
+else if (j == " ") 
+  {
+    alert("Password must be filled out");
+    return false;
+  }
+else
+{alert("Successfully Saved");}
+
+
+}
+</script>
+</body>
+</html>
